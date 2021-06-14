@@ -6,13 +6,13 @@ The work is developed following the below index, starting from the Data Understa
 
 1. Body Mass Index (BMI) Data set
 
-   1.1 Introduction 
+   1.1  Introduction 
     
-   1.2 Selection of all the possible Distributions
+   1.2  Selection of all the possible Distributions
 
-   1.3 Distribution choice
+   1.3  Distribution choice
     
-   1.4 Output the Parameters
+   1.4  Output the Parameters
    
 ## Introduction to the Body Mass Index (BMI) data set 
 

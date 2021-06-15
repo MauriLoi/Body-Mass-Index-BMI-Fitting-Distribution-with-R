@@ -19,15 +19,15 @@ The work is developed following the below index, starting from the Data Understa
 The aim of this section of the report is to analyze the data set previous given of the Body Mass Index(BMI) from the Fourth Dutch Growth Study, Fredrisk et al.(2000a) and find a suitable probability distribution to fit at the data. The dataset reports 7482 observations and has as explanatory variable the age. The age range from 0.03 (3 days) to 21.70 (21 years and 7 months).The first step is to create a sub set of observations for a single year. I have decided to choose as a year of my subset data the age from 14 to 15.
 Fitting a distribution is the process of finding a mathematical function that represent at the best a statistical variable in our case the BMI. In practice given the unknown distribution density (pdf) derivate from our observation sample that is an univariate continuous distribution with domain[0,+∞ ] we need to select an appropriate distribution that is able to approximate the behavior of the empirical data. I will use a two steps approach the fitting stage and the diagnostic one. I will fit different distribution and compare them using the generalized Akaike information criterion (GAIC) given the nature of not nested gamlss models. After I have compered the different result I will choose the one with the smallest GAIC(k) after the selection of the value k. Reminding the fact that GAIK(k)=GD + (k *df), where df is the effective degree of freedom used in the model and GD is the fitted Global deviance. The first approach is to explore the data with histograms and short descriptive stats, the frequency histogram with 60 bins of the values, the empirical density function and the empirical cumulative frequency distributions are reported below (see figure 1,3 and 4 for the BMI data set ). Descriptive statistic of the distribution as the mean, standard deviation, skewness, kurtosis this could be done using the descdist(). A skewness-kurtosis plot proposed by Cullen and Frey (1999) provided by the descdist() function is shown above (see Figure 2 for the BMI data set).
 
-![Histogram](/images/Picture1.png)   
+![Histogram](Images/Picture1.png)   
 
 Figure 1 Histogram of the frequencies distibution of the variable BMI)  Figure 2 Cullen and Frey graph)
 
-![Cullen and Frey graph](/images/Picture2.png)
+![Cullen and Frey graph](/Images/Picture2.png)
 
 Figure 2 Cullen and Frey graph)
 
-![](/images/Picture3.png)
+![](/Images/Picture3.png)
 
 Figure 3 Shows the pdf() of the BM &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   Figure 4 Shows the cdf() of the BMI
 
@@ -41,9 +41,9 @@ If we take a look on the Cullen and Frey plot, some of the distributions are rep
 The next step is to identify the possible ‘candidate’ distributions to be fitted and tested. Given the nature of the distribution of our data we can restrict the field to few functions able to model the skewness and the kurtosis. The Box- Cox Cole-Green family ,GA(gamma) the gamma distribution is appropriate for positively skew data, IG(inverse Gaussian) the inverse Gaussian distribution is appropriate for highly positive skew data, SEP1(Skew power exp, t1, parametrization of PE, TF(T family distribution) the t family distribution, is symmetric but able to model leptokurtosis), PE(Power exponential, the power exponential distribution is suitable for leptokurtic and platykurtic data.
 Using the histDist() funtion that fits constants to the parameters of a GAMLSS family distribution and them plot the histogram and the fitted distribution[1]. I will compare all the fitted distributions graphically and with the gamlss() function that returns an object of class "gamlss" I will create a set of linear model for each of the distributions and compare the GD. The results of the histDist() are shown above.
 
-![Histogram](/images/Picture4.png) 
-![Histogram](/images/Picture5.png)  
-![Histogram](/images/Picture6.png)
+![Histogram](/Images/Picture4.png) 
+![Histogram](/Images/Picture5.png)  
+![Histogram](/Images/Picture6.png)
 
 Figure 4  histdist() for all the distribution: NO, GA, IG, SEP1, TF, exGAUS
 
@@ -55,20 +55,20 @@ The GAIC(k) is a better estimator for the comparison of the models. The GAIC it 
 GAIC(k)= GD +(k * df);
 Testing the distribution under the AIC that use k=2 and SBC that use k=log(n) and different values of k can help. The sensitivity of the selected model to the choice of k can be also tested. Testing the models build on the distributions selected we have this result for k=2 (AIC) k=~6(SBC,log(n=403) and k=2.5,3,3.5,4.
 
-![Histogram](/images/Picture7.png) &emsp; ![Histogram](/images/Picture8.png)  
-![Histogram](/images/Picture9.png)
+![Histogram](/Images/Picture7.png) &emsp; ![Histogram](/Images/Picture8.png)  
+![Histogram](/Images/Picture9.png)
 
 Figure 5 GAIC(k) result: k=2, k=6, k=3, k=3. 5, k=4 
 
 Given the result of the GAIC test we can assume that the best distributions to fit our data and build the model on it is the exGAUS and or the BCPE. As the penalization in respect to the number of parameters of the model is larger k=2,3,3.5,4,6 the best model is changing. For small number of k the BCPE is chosen for larger number of k ExGAUSS is selected. Following the criteria of the GAIC i will select the exGAUS. The plotted fitted distribution and the simple linear model of the exGAUS are shown in figure 6 and 7.
 
-![Histogram](/images/Picture10.png) &emsp;&emsp; ![Histogram](/images/Picture11.png)
+![Histogram](/Images/Picture10.png) &emsp;&emsp; ![Histogram](/Images/Picture11.png)
 
 Figure 6 Plotted pdf(BMI) fitted with the exGauss distribution
 
 The exGaus distribution is fitting well the distribution of our data dealing with the skewness and the kurtosis. The fitted parameters of the distribution are shown in the next paragraph. 
 
-![Histogram](/images/Picture12.png)
+![Histogram](/Images/Picture12.png)
 
 Figure 7 Linear regression model using exGaus distribution
 
@@ -76,13 +76,13 @@ Figure 7 Linear regression model using exGaus distribution
 
 The outcomes of the linear model fitted with the exGAUS distribution are shown above in figure 8. The univariate function is expressed as y = ß0 +  ß1 (age), where ß0  is the intercept of value 11.2145 and ß1 = 0.4365. The sigma and the nu coefficients are expressing the value of the fitted sigma and the nu fitted value. The sigma coefficient of our fitted model, 0.25567 is the ln of the fitted variance 1.29132 of the distribution . The same as for the nu given the log link function. The AIC has value 1727.725 that alone doesn’t have a specific mining  but just when compared with the other model as said above.
 
-![Histogram](/images/Picture13.png)
-![Histogram](/images/Picture14.png)
+![Histogram](/Images/Picture13.png)
+![Histogram](/Images/Picture14.png)
 
 
 Residual of the fitted distribution and the fitted model are show above
 
-![Histogram](/images/Picture15.png)
+![Histogram](/Images/Picture15.png)
 
 
 

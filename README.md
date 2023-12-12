@@ -21,7 +21,7 @@ Fitting a distribution is the process of finding a mathematical function that re
 
 &emsp;&emsp;![Cullen and Frey graph](/Images/Picture2.png)  
 
-&emsp;&emsp;&emsp;Figure 2 Cullen and Frey graph  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Figure 2 Cullen and Frey graph  
 
 ![](/Images/Picture3.png)  
 

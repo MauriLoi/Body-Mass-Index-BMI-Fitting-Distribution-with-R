@@ -20,7 +20,7 @@ Fitting a distribution is the process of finding a mathematical function that re
 
 &emsp;&emsp;&emsp;Figure 1 Histogram of the frequencies distibution of the variable BMI
 
-&emsp;&emsp;&emsp;![Cullen and Frey graph](/Images/Picture2.png)  
+&emsp;&emsp;&emsp;&emsp;&emsp;![Cullen and Frey graph](/Images/Picture2.png)  
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Figure 2 Cullen and Frey graph  
 
@@ -36,10 +36,10 @@ Similarly, the kurtosis value measures the weight of tails in comparison to the 
 <div align="justify"> Improve it
 To proceed, we need to identify the possible distributions that can be fitted and tested. Due to the nature of our data, we can limit the choices to some functions that are capable of modeling skewness and kurtosis. In the Box-Cox Cole-Green family, we have a few appropriate options, including the gamma (GA) distribution, which is suitable for positively skewed data, the (IG) inverse Gaussian distribution, which is appropriate for highly positively skewed data, the SEP1(Skew power exp, t1, parametrization of PE, and TF(T family distribution) the t family distribution, which is symmetric but can model leptokurtosis, and the (PE) power exponential distribution, which is suitable for leptokurtic and platykurtic data.
 Using the histDist() funtion that fits constants to the parameters of a GAMLSS family distribution and them plot the histogram and the fitted distribution[1]. I will compare all the fitted distributions graphically and with the gamlss() function that returns an object of class "gamlss" I will create a set of linear model for each of the distributions and compare the GD. The results of the histDist() are shown above.  </div>  <br/>
-![Histogram](/Images/Picture4.png) 
-![Histogram](/Images/Picture5.png)  
-![Histogram](/Images/Picture6.png) 
-Figure 4  histdist() for all the distribution: NO, GA, IG, SEP1, TF, exGAUS  
+&emsp;&emsp;![Histogram](/Images/Picture4.png) 
+&emsp;&emsp;![Histogram](/Images/Picture5.png)  
+&emsp;&emsp;![Histogram](/Images/Picture6.png) 
+&emsp;&emsp;Figure 4  histdist() for all the distribution: NO, GA, IG, SEP1, TF, exGAUS  
 
 ###  1.3 Distribution choice  
 
@@ -71,7 +71,7 @@ Figure 7 Linear regression model using exGaus distribution
 
 Residual of the fitted distribution and the fitted model are show above  
 
-&emsp;&emsp;&emsp;&emsp;![Histogram](/Images/Picture15.png)  
+&emsp;&emsp;&emsp;&emsp;&emsp;![Histogram](/Images/Picture15.png)  
 
 
 

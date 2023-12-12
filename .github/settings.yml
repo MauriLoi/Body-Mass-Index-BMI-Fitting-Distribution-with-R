@@ -28,4 +28,4 @@ branch_protection:
     contexts:
       - "script/cibuild" # GitHub Actions CI workflow
   required_pull_request_reviews:
-    require_code_owner_reviews: true
+    require_code_owner_reviews: true 

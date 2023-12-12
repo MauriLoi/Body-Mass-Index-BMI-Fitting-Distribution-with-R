@@ -21,13 +21,14 @@ Fitting a distribution is the process of finding a mathematical function that re
 
 &emsp;&emsp;&emsp;Figure 1 Histogram of the frequencies distibution of the variable BMI
 
-![Cullen and Frey graph](/Images/Picture2.png)
+![Cullen and Frey graph](/Images/Picture2.png)  
 
-&emsp;&emsp;&emsp;Figure 2 Cullen and Frey graph
+&emsp;&emsp;&emsp;Figure 2 Cullen and Frey graph  
 
-![](/Images/Picture3.png)
+![](/Images/Picture3.png)  
 
-&emsp;&emsp;&emsp; Figure 3 Shows the pdf() of the BM &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Figure 4 Shows the cdf() of the BMI  
+&emsp;&emsp;&emsp; Figure 3 Shows the pdf() of the BM  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Figure 4 Shows the cdf() of the BMI  
 
 <div align="justify"> The skewness and kurtosis could really help in the identification of the best fit for our distribution. Remanding the fact that when the value of the skewness is zero the distribution is a normal, perfectly symmetric around his mean, if we find a positive or negative skewness is the evidence of a non-symmetric distribution.
 The kurtosis value quantifies the weight of tails in comparison to the normal distribution for which the kurtosis equals 3.
@@ -36,7 +37,7 @@ If we take a look on the Cullen and Frey plot, some of the distributions are rep
 ### 1.2 Selection of all the possible Distributions  
 
 <div align="justify"> The next step is to identify the possible ‘candidate’ distributions to be fitted and tested. Given the nature of the distribution of our data we can restrict the field to few functions able to model the skewness and the kurtosis. The Box- Cox Cole-Green family ,GA(gamma) the gamma distribution is appropriate for positively skew data, IG(inverse Gaussian) the inverse Gaussian distribution is appropriate for highly positive skew data, SEP1(Skew power exp, t1, parametrization of PE, TF(T family distribution) the t family distribution, is symmetric but able to model leptokurtosis), PE(Power exponential, the power exponential distribution is suitable for leptokurtic and platykurtic data.
-Using the histDist() funtion that fits constants to the parameters of a GAMLSS family distribution and them plot the histogram and the fitted distribution[1]. I will compare all the fitted distributions graphically and with the gamlss() function that returns an object of class "gamlss" I will create a set of linear model for each of the distributions and compare the GD. The results of the histDist() are shown above.  </div>
+Using the histDist() funtion that fits constants to the parameters of a GAMLSS family distribution and them plot the histogram and the fitted distribution[1]. I will compare all the fitted distributions graphically and with the gamlss() function that returns an object of class "gamlss" I will create a set of linear model for each of the distributions and compare the GD. The results of the histDist() are shown above.  </div>  
 
 ![Histogram](/Images/Picture4.png) 
 ![Histogram](/Images/Picture5.png)  
@@ -49,7 +50,7 @@ Figure 4  histdist() for all the distribution: NO, GA, IG, SEP1, TF, exGAUS
 <div align="justify"> After running all the gamlss objects and comparing the global deviance and the histDist() graphs results we have already an idea of the best distribution to fit. The fitted BCPE and exGauss are performing better in terms of Global Deviance . The GD of the BCPE is from the summary() function 1721.73 and the one for the exGAUS is 1723.54. The global deviance is not a good indicator for the comparison of those models given the not nested nature of them.
 The GAIC(k) is a better estimator for the comparison of the models. The GAIC it tells nothing about the absolute quality of a models, only the quality relative to other models. The GAIC(k) is obtained adding to the fitted global deviance a fixed penalty k for each degree of freedom used in a model, is an increasing function of the numbers of the estimated parameters, the penalty discourage overfitting, because increasing the number of parameters in the model always improve the goodness of the fitting:
 GAIC(k)= GD +(k * df);
-Testing the distribution under the AIC that use k=2 and SBC that use k=log(n) and different values of k can help. The sensitivity of the selected model to the choice of k can be also tested. Testing the models build on the distributions selected we have this result for k=2 (AIC) k=~6(SBC,log(n=403) and k=2.5,3,3.5,4.  </div>
+Testing the distribution under the AIC that use k=2 and SBC that use k=log(n) and different values of k can help. The sensitivity of the selected model to the choice of k can be also tested. Testing the models build on the distributions selected we have this result for k=2 (AIC) k=~6(SBC,log(n=403) and k=2.5,3,3.5,4.  </div>  
 
 ![Histogram](/Images/Picture7.png) &emsp; ![Histogram](/Images/Picture8.png)  
 ![Histogram](/Images/Picture9.png)
@@ -57,7 +58,7 @@ Testing the distribution under the AIC that use k=2 and SBC that use k=log(n) an
 
 Figure 5 GAIC(k) result: k=2, k=6, k=3, k=3. 5, k=4  
 
-<div align="justify"> Given the result of the GAIC test we can assume that the best distributions to fit our data and build the model on it is the exGAUS and or the BCPE. As the penalization in respect to the number of parameters of the model is larger k=2,3,3.5,4,6 the best model is changing. For small number of k the BCPE is chosen for larger number of k ExGAUSS is selected. Following the criteria of the GAIC i will select the exGAUS. The plotted fitted distribution and the simple linear model of the exGAUS are shown in figure 6 and 7.  </div>
+<div align="justify"> Given the result of the GAIC test we can assume that the best distributions to fit our data and build the model on it is the exGAUS and or the BCPE. As the penalization in respect to the number of parameters of the model is larger k=2,3,3.5,4,6 the best model is changing. For small number of k the BCPE is chosen for larger number of k ExGAUSS is selected. Following the criteria of the GAIC i will select the exGAUS. The plotted fitted distribution and the simple linear model of the exGAUS are shown in figure 6 and 7.  </div>  
 
 ![Histogram](/Images/Picture10.png) &emsp;&emsp; ![Histogram](/Images/Picture11.png)  
 
@@ -71,14 +72,14 @@ Figure 7 Linear regression model using exGaus distribution
 
 ###  1.4 Output the Parameters  
 
-<div align="justify"> The outcomes of the linear model fitted with the exGAUS distribution are shown above in figure 8. The univariate function is expressed as y = ß0 +  ß1 (age), where ß0  is the intercept of value 11.2145 and ß1 = 0.4365. The sigma and the nu coefficients are expressing the value of the fitted sigma and the nu fitted value. The sigma coefficient of our fitted model, 0.25567 is the ln of the fitted variance 1.29132 of the distribution . The same as for the nu given the log link function. The AIC has value 1727.725 that alone doesn’t have a specific mining  but just when compared with the other model as said above.  </div>
+<div align="justify"> The outcomes of the linear model fitted with the exGAUS distribution are shown above in figure 8. The univariate function is expressed as y = ß0 +  ß1 (age), where ß0  is the intercept of value 11.2145 and ß1 = 0.4365. The sigma and the nu coefficients are expressing the value of the fitted sigma and the nu fitted value. The sigma coefficient of our fitted model, 0.25567 is the ln of the fitted variance 1.29132 of the distribution . The same as for the nu given the log link function. The AIC has value 1727.725 that alone doesn’t have a specific mining  but just when compared with the other model as said above.  </div>  
 
 ![Histogram](/Images/Picture13.png)
 ![Histogram](/Images/Picture14.png)  
 
 Residual of the fitted distribution and the fitted model are show above  
 
-![Histogram](/Images/Picture15.png)
+![Histogram](/Images/Picture15.png)  
 
 
 

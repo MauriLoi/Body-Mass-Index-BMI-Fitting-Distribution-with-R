@@ -1,7 +1,7 @@
 ## [Body Mass Index BMI fitting Distribution with R](https://github.com/MauriLoi/Body-Mass-Index-BMI-fitting-Distribution-with-R)
 
 <div align="justify"> The data are comming from the Fourth Dutch Growth Study, Fredriks et al. (2000a, 2000b), which is a cross-sectional study that measures growth and development of the Dutch population between the ages 0 and 21 years. The study measured, among other variables, height, weight, head circumference and age for 7482 males and 7018 females. Here we have the only the BMI of Dutch boys.  </div>  
-<br />
+<br/>
 1. Body Mass Index (BMI) Data set
 
    1.1  Introductionto to the Body Mass Index (BMI) data set 
@@ -33,7 +33,7 @@ Figure 3 Shows the pdf() of the BM &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&em
 The kurtosis value quantifies the weight of tails in comparison to the normal distribution for which the kurtosis equals 3.
 If we take a look on the Cullen and Frey plot, some of the distributions are represented as a single point due to the fact that they can only assume specific value of skewness and kurtosis. For other distributions, areas of possible values are represented, consisting in lines (as for gamma and lognormal distributions), or larger areas (as for beta distribution).Is always good to keep in mind that the suggestion given by the Cullen an Grey is always an approximation given the non-robust nature of the skewness and kurtosis and them uncertainty even when the method of the bootstraps(random sampling with replacement) has been applied to deal with this aspect. No consistent information has been given from the Cullen and Frey plot the data doesn’t follow any well know distribution. Analyzing the graphs of the distribution we see that it is slightly skewed on the right(positive skewness ) and leptokurtic (positive kurtosis). Knowing this we can start to formulate some hypothesis. In our case the distribution has 𝜇 = 19.748870, 𝜎 = 2.268981, 𝜗 = 1.510098 𝑎𝑛𝑑 𝜏 = 9.110169. A good idea is to start from the normal distribution even if we already know it will not be the best fit but it will give us some idea on the overall behave of the distribution.  </div>  
 
-###  1.2 Selection of all the possible Distributions  
+### 1.2 Selection of all the possible Distributions  
 
 <div align="justify"> The next step is to identify the possible ‘candidate’ distributions to be fitted and tested. Given the nature of the distribution of our data we can restrict the field to few functions able to model the skewness and the kurtosis. The Box- Cox Cole-Green family ,GA(gamma) the gamma distribution is appropriate for positively skew data, IG(inverse Gaussian) the inverse Gaussian distribution is appropriate for highly positive skew data, SEP1(Skew power exp, t1, parametrization of PE, TF(T family distribution) the t family distribution, is symmetric but able to model leptokurtosis), PE(Power exponential, the power exponential distribution is suitable for leptokurtic and platykurtic data.
 Using the histDist() funtion that fits constants to the parameters of a GAMLSS family distribution and them plot the histogram and the fitted distribution[1]. I will compare all the fitted distributions graphically and with the gamlss() function that returns an object of class "gamlss" I will create a set of linear model for each of the distributions and compare the GD. The results of the histDist() are shown above.  </div>

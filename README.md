@@ -1,7 +1,7 @@
 ## [Body Mass Index BMI fitting Distribution with R](https://github.com/MauriLoi/Body-Mass-Index-BMI-fitting-Distribution-with-R)
 
 <div align="justify"> The data are comming from the Fourth Dutch Growth Study, Fredriks et al. (2000a, 2000b), which is a cross-sectional study that measures growth and development of the Dutch population between the ages 0 and 21 years. The study measured, among other variables, height, weight, head circumference and age for 7482 males and 7018 females. Here we have the only the BMI of Dutch boys.  </div>
-
+<br />
 1. Body Mass Index (BMI) Data set
 
    1.1  Introductionto to the Body Mass Index (BMI) data set 
@@ -12,7 +12,7 @@
     
    1.4  Output the Parameters
    
-### 1.1 Introduction to the Body Mass Index (BMI) data set 
+### 1.1 Introduction to the Body Mass Index (BMI) data set  
 
 <div align="justify"> The aim of this section of the report is to analyze the data set previous given of the Body Mass Index(BMI) from the Fourth Dutch Growth Study, Fredrisk et al.(2000a) and find a suitable probability distribution to fit at the data. The dataset reports 7482 observations and has as explanatory variable the age. The age range from 0.03 (3 days) to 21.70 (21 years and 7 months).The first step is to create a sub set of observations for a single year. I have decided to choose as a year of my subset data the age from 14 to 15.
 Fitting a distribution is the process of finding a mathematical function that represent at the best a statistical variable in our case the BMI. In practice given the unknown distribution density (pdf) derivate from our observation sample that is an univariate continuous distribution with domain[0,+∞ ] we need to select an appropriate distribution that is able to approximate the behavior of the empirical data. I will use a two steps approach the fitting stage and the diagnostic one. I will fit different distribution and compare them using the generalized Akaike information criterion (GAIC) given the nature of not nested gamlss models. After I have compered the different result I will choose the one with the smallest GAIC(k) after the selection of the value k. Reminding the fact that GAIK(k)=GD + (k *df), where df is the effective degree of freedom used in the model and GD is the fitted Global deviance. The first approach is to explore the data with histograms and short descriptive stats, the frequency histogram with 60 bins of the values, the empirical density function and the empirical cumulative frequency distributions are reported below (see figure 1,3 and 4 for the BMI data set ). Descriptive statistic of the distribution as the mean, standard deviation, skewness, kurtosis this could be done using the descdist(). A skewness-kurtosis plot proposed by Cullen and Frey (1999) provided by the descdist() function is shown above (see Figure 2 for the BMI data set). </div>

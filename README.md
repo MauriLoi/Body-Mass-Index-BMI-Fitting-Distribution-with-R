@@ -19,11 +19,11 @@ Fitting a distribution is the process of finding a mathematical function that re
 
 ![Histogram](Images/Picture1.png)   
 
-Figure 1 Histogram of the frequencies distibution of the variable BMI)  Figure 2 Cullen and Frey graph)
+Figure 1 Histogram of the frequencies distibution of the variable BMI
 
 ![Cullen and Frey graph](/Images/Picture2.png)
 
-Figure 2 Cullen and Frey graph)
+Figure 2 Cullen and Frey graph
 
 ![](/Images/Picture3.png)
 

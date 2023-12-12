@@ -30,7 +30,7 @@ Figure 2 Cullen and Frey graph)
 
 ![](/Images/Picture3.png)
 
-Figure 3 Shows the pdf() of the BM &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Figure 4 Shows the cdf() of the BMI
+Figure 3 Shows the pdf() of the BM &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Figure 4 Shows the cdf() of the BMI
 
 
 <div align="justify"> The skewness and kurtosis could really help in the identification of the best fit for our distribution. Remanding the fact that when the value of the skewness is zero the distribution is a normal, perfectly symmetric around his mean, if we find a positive or negative skewness is the evidence of a non-symmetric distribution.
@@ -62,6 +62,7 @@ Testing the distribution under the AIC that use k=2 and SBC that use k=log(n) an
 Figure 5 GAIC(k) result: k=2, k=6, k=3, k=3. 5, k=4 
 
 <div align="justify"> Given the result of the GAIC test we can assume that the best distributions to fit our data and build the model on it is the exGAUS and or the BCPE. As the penalization in respect to the number of parameters of the model is larger k=2,3,3.5,4,6 the best model is changing. For small number of k the BCPE is chosen for larger number of k ExGAUSS is selected. Following the criteria of the GAIC i will select the exGAUS. The plotted fitted distribution and the simple linear model of the exGAUS are shown in figure 6 and 7. </div>
+
 
 ![Histogram](/Images/Picture10.png) &emsp;&emsp; ![Histogram](/Images/Picture11.png)
 

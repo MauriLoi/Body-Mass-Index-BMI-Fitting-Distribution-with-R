@@ -37,8 +37,7 @@ If we take a look on the Cullen and Frey plot, some of the distributions are rep
 Using the histDist() funtion that fits constants to the parameters of a GAMLSS family distribution and them plot the histogram and the fitted distribution[1]. I will compare all the fitted distributions graphically and with the gamlss() function that returns an object of class "gamlss" I will create a set of linear model for each of the distributions and compare the GD. The results of the histDist() are shown above.  </div>  <br>
 ![Histogram](/Images/Picture4.png) 
 ![Histogram](/Images/Picture5.png)  
-![Histogram](/Images/Picture6.png)
-
+![Histogram](/Images/Picture6.png) 
 Figure 4  histdist() for all the distribution: NO, GA, IG, SEP1, TF, exGAUS  
 
 ###  1.3 Distribution choice  

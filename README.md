@@ -1,7 +1,7 @@
 ## [Body Mass Index BMI fitting Distribution with R](https://github.com/MauriLoi/Body-Mass-Index-BMI-fitting-Distribution-with-R)
 
 <div align="justify"> The data are comming from the Fourth Dutch Growth Study, Fredriks et al. (2000a, 2000b), which is a cross-sectional study that measures growth and development of the Dutch population between the ages 0 and 21 years. The study measured, among other variables, height, weight, head circumference and age for 7482 males and 7018 females. Here we have the only the BMI of Dutch boys.  </div>  
-<br/>
+<br>
 1. Body Mass Index (BMI) Data set
 
    1.1  Introductionto to the Body Mass Index (BMI) data set 

@@ -71,7 +71,7 @@ Figure 7 Linear regression model using exGaus distribution
 
 Residual of the fitted distribution and the fitted model are show above  
 
-![Histogram](/Images/Picture15.png)  
+&emsp;&emsp;&emsp;&emsp;![Histogram](/Images/Picture15.png)  
 
 
 

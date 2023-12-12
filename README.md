@@ -1,6 +1,6 @@
 ## [Body Mass Index BMI fitting Distribution with R](https://github.com/MauriLoi/Body-Mass-Index-BMI-fitting-Distribution-with-R)
 
-<div align="justify"> The data are comming from the Fourth Dutch Growth Study, Fredriks et al. (2000a, 2000b), which is a cross-sectional study that measures growth and development of the Dutch population between the ages 0 and 21 years. The study measured, among other variables, height, weight, head circumference and age for 7482 males and 7018 females. Here we have the only the BMI of Dutch boys.  </div>  
+<div align="justify"> The data are comming from the Fourth Dutch Growth Study, Fredriks et al. (2000a, 2000b), which is a cross-sectional study that measures growth and development of the Dutch population between the ages 0 and 21 years. The study measured, among other variables, height, weight, head circumference and age for 7482 males and 7018 females. Here we have the only the BMI of Dutch boys.  </div>   <br/>
 
 1. Body Mass Index (BMI) Data set
 
@@ -35,7 +35,7 @@ If we take a look on the Cullen and Frey plot, some of the distributions are rep
 ### 1.2 Selection of all the possible Distributions  
 
 <div align="justify"> The next step is to identify the possible ‘candidate’ distributions to be fitted and tested. Given the nature of the distribution of our data we can restrict the field to few functions able to model the skewness and the kurtosis. The Box- Cox Cole-Green family ,GA(gamma) the gamma distribution is appropriate for positively skew data, IG(inverse Gaussian) the inverse Gaussian distribution is appropriate for highly positive skew data, SEP1(Skew power exp, t1, parametrization of PE, TF(T family distribution) the t family distribution, is symmetric but able to model leptokurtosis), PE(Power exponential, the power exponential distribution is suitable for leptokurtic and platykurtic data.
-Using the histDist() funtion that fits constants to the parameters of a GAMLSS family distribution and them plot the histogram and the fitted distribution[1]. I will compare all the fitted distributions graphically and with the gamlss() function that returns an object of class "gamlss" I will create a set of linear model for each of the distributions and compare the GD. The results of the histDist() are shown above.  </div>  <br>
+Using the histDist() funtion that fits constants to the parameters of a GAMLSS family distribution and them plot the histogram and the fitted distribution[1]. I will compare all the fitted distributions graphically and with the gamlss() function that returns an object of class "gamlss" I will create a set of linear model for each of the distributions and compare the GD. The results of the histDist() are shown above.  </div>  <br/>
 ![Histogram](/Images/Picture4.png) 
 ![Histogram](/Images/Picture5.png)  
 ![Histogram](/Images/Picture6.png) 
